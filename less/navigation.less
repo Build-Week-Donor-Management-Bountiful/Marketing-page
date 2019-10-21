@@ -1,0 +1,31 @@
+// Navigation code here
+
+.headerBoxWide {
+    .containerBackground(); //basic mixin
+
+    #navContainer{
+        padding: 2% 0;
+        .custom-layout(space-between, center); // fancier mixin (@justify, @align) "display: flex and justify-content and "align-items" 
+        
+    
+        h1 {
+            width: 25%;
+        }
+        nav {
+            width: 75%;
+            padding-left: 10%;
+        }
+
+        a {
+        font-size: 2rem;
+        text-decoration: none;
+        margin: 0 0 0 1rem;
+        color: @nav-font;
+        justify-content: right;
+
+        }    
+    }
+    
+
+
+}
