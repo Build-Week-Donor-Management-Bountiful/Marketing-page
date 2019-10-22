@@ -1,5 +1,5 @@
 .containerBackground {
-  background-color: #ffdcdc;
+  background-color: #ffe1e1;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -138,7 +138,7 @@ html {
 html,
 body {
   font-family: 'Muli', sans-serif;
-  color: #5E6164;
+  color: #32383d;
 }
 h1,
 h2,
@@ -170,7 +170,7 @@ p {
   margin: 0 auto;
 }
 .headerBoxWide {
-  background-color: #ffdcdc;
+  background-color: #ffe1e1;
 }
 .headerBoxWide #navContainer {
   padding: 2% 0;
@@ -179,22 +179,35 @@ p {
   align-items: center;
 }
 .headerBoxWide #navContainer h1 {
-  width: 25%;
+  width: auto;
 }
 .headerBoxWide #navContainer nav {
-  width: 75%;
-  padding-left: 10%;
+  width: auto;
+}
+@media (max-width: 500px) {
+  .headerBoxWide #navContainer nav {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: stretch;
+  }
 }
 .headerBoxWide #navContainer a {
   font-size: 2rem;
   text-decoration: none;
-  margin: 0 0 0 1rem;
+  margin: 0 0.5rem;
   color: #23293B;
-  justify-content: right;
+}
+@media (max-width: 500px) {
+  .headerBoxWide #navContainer a {
+    border: 1px solid #23293B;
+    margin: 3%;
+    padding: 3%;
+  }
 }
 footer {
   color: #23293B;
-  background: #ffdcdc;
+  background: #ffe1e1;
   padding: 20px 0;
   border: 1px double #e0e0e0;
   border-radius: 10px;
@@ -202,137 +215,96 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.home img {
-  border-radius: 5px;
-  width: 100%;
-  height: 100px;
+#home .backgroundimg {
+  background-image: url("../img/polina-rytova-1dGMs4hhcVA-unsplash.jpg");
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
 }
-.home .intro h2 {
+#home #topsection h3 {
+  margin-top: 2%;
   padding: 2%;
 }
 @media (max-width: 500px) {
-  .home .intro h2 {
+  #home #topsection h3 {
     margin: 0 2%;
   }
 }
-.home .intro p {
-  padding: 10px 2%;
+#home #topsection p {
+  padding: 2%;
+  width: 90%;
 }
 @media (max-width: 500px) {
-  .home .intro p {
+  #home #topsection p {
     margin: 0 2%;
   }
 }
-.home .space-images {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-@media (max-width: 500px) {
-  .home .space-images {
-    margin: 0 5%;
-  }
-}
-.home .space-images img {
-  width: 28%;
-  margin: 20px 2.5%;
-  border-radius: 20px;
-  height: 100%;
-}
-@media (max-width: 500px) {
-  .home .space-images img {
-    margin: 0;
-    width: 90%;
-    margin-top: 20px;
-  }
-}
-@media (max-width: 500px) {
-  .home .space-images img.sky {
-    display: none;
-  }
-  .home .space-images img.launch {
-    display: none;
-  }
-}
-.home .visit-planets h3 {
-  margin-top: 11px;
-  padding: 0 15px;
-}
-@media (max-width: 500px) {
-  .home .visit-planets h3 {
-    margin: 5% 0;
-  }
-}
-.home .visit-planets p {
-  margin-top: 13px;
-  padding: 0 15px;
-}
-@media (max-width: 500px) {
-  .home .visit-planets p {
-    margin: 1% 0;
-  }
-}
-.home .join {
+#home #join {
   margin-top: 2%;
   border-top: 1px solid #dee2e6;
-  padding: 2%;
+  padding: 8%;
   display: flex;
   justify-content: center;
 }
 @media (max-width: 500px) {
-  .home .join {
+  #home #join {
     flex-direction: column-reverse;
     align-items: center;
   }
 }
-.home .join .join-text {
+#home #join .join-text {
   width: 50%;
 }
 @media (max-width: 500px) {
-  .home .join .join-text {
+  #home #join .join-text {
     width: 100%;
   }
 }
-.home .join .join-text h3 {
-  margin-bottom: 2rem;
+#home #join .join-text h3 {
+  margin-bottom: 5%;
+  width: 90%;
+  opacity: 50%;
+}
+@mobile (max-width: 500px) {
+  margin-top: 5%;
+}
+#home #join .join-text p {
+  margin-bottom: 5%;
   width: 90%;
 }
-.home .join .join-text p {
-  margin-bottom: 2rem;
-  width: 90%;
-}
-.home .join .join-text .btn {
+#home #join .join-text .btn {
+  margin-bottom: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #FFA07A;
   background-color: #8B0000;
   width: 50%;
-  height: 3rem;
+  height: 4.5rem;
   font-size: 2.5rem;
   border-radius: 5px;
 }
-.home .join .join-text .btn:hover {
+#home #join .join-text .btn:hover {
   background-color: #FFA07A;
   color: #8B0000;
   border: 1px solid #23293B;
 }
 @media (max-width: 500px) {
-  .home .join .join-text .btn {
+  #home #join .join-text .btn {
     width: 100%;
     height: 4.8rem;
     font-size: 2.8rem;
   }
 }
-.home .join .walk-img {
+#home #join .join-img {
   width: 50%;
 }
 @media (max-width: 500px) {
-  .home .join .walk-img {
+  #home #join .join-img {
     width: 100%;
   }
 }
-.home .join .walk-img img {
+#home #join .join-img img {
   width: 100%;
   height: auto;
   border-radius: 10px;

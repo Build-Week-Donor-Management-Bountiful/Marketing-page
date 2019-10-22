@@ -9,19 +9,33 @@
         
     
         h1 {
-            width: 25%;
+            width: auto;
         }
         nav {
-            width: 75%;
-            padding-left: 10%;
+            width: auto;
+
+
+        @media @phone {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            align-items: stretch;
+
+          }
+        
         }
 
         a {
         font-size: 2rem;
         text-decoration: none;
-        margin: 0 0 0 1rem;
+        margin: 0 0.5rem;
         color: @nav-font;
-        justify-content: right;
+        @media @phone {
+            border: 1px solid @header-font-color;
+            margin: 3%;
+            padding: 3%;
+            
+          }
 
         }    
     }
