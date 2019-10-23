@@ -1,0 +1,48 @@
+// Mixins Here
+
+//complex parametric mixin for button
+.joinButton(@btn-bg-color, @btn-font-color) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: @btn-font-color;
+    background-color: @btn-bg-color;
+    width: 50%;
+    height: 4.5rem;
+    font-size: 2.5rem;
+    border-radius: 5px;
+    
+    a:link, a:visited{
+        text-decoration: none;
+        color: @btn-font-color;
+          &:hover{
+            color: @btn-bg-color;
+          }
+        }
+
+
+
+    &:hover {
+        background-color: @btn-font-color;
+        color: @btn-bg-color;
+        border: 1px solid #23293B;
+
+    }
+    
+
+}
+
+
+// my display: flex mixin
+.custom-layout(@justify, @align){
+	display: flex;
+	justify-content: @justify;
+    align-items: @align;
+}
+
+
+// basic mixin 
+.containerBackground {
+    background-color: @nav-bg;
+}
